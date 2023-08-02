@@ -1,6 +1,6 @@
 const mariadb = require('mariadb');
 const pool = mariadb.createPool(
-    {host: '127.0.0.1', user: 'root', password: 'root', connectionLimit: 5, database: 'memo'}
+    {host: 'svc.sel4.cloudtype.app', user: 'edohan', password: 'edohan', connectionLimit: 5, database: 'edohan'}
 );
 
 module.exports = {

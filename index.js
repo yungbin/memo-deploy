@@ -21,7 +21,6 @@ app.post("/api/memos", async (req, res) => {
 
 app.put("/api/memos/:id", async (req, res) => {
     await database.run(`UPDATE memos SET content = ? WHERE id = ?`,[req.body.content, req.params.id]);
-    memos[req.params.id] = req.body.content;
     const result = await database.run("SELECT * FROM memos");
     res.send(result)
 })
